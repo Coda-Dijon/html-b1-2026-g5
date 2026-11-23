@@ -2,7 +2,7 @@
 
 Membres du groupe :
 
-- A
+- A : Noé Grosse
 - B
 - C
 - D
