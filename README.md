@@ -3,7 +3,7 @@
 Membres du groupe :
 
 - A : Noé Grosse
-- B
+- B mathew dacruz
 - C
 - D
 
