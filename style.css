@@ -9,7 +9,7 @@ html body {
     height: 100%;
 }
 
-#page {
+.page {
   display: grid;
   width: 100%;
   height: auto;
@@ -21,39 +21,43 @@ html body {
     grid-template-rows: auto auto auto;
 }
 
-#page > header {
+.page .navbar {
   grid-area: head;
   background-color: #8ca0ff;
 }
 
-#page > main {
+.page main {
   grid-area: main;
   background-color: #ffff64;
 }
 
-#page > footer {
+.page footer {
   grid-area: foot;
   background-color: #8cffa0;
 }
 
-header {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: auto;
+
     h1 {
         margin-left: .5rem;
     }
+
     a {
         margin: 1rem;
         justify-content: right;
     }
-    nav a:last-child {
+
+    .shop {
         border: 1px solid white;
         border-radius: 100px;
         padding: .25rem .5rem .25rem .5rem;
     }
-    nav a:last-child::after {
+
+    .shop::after {
         content: url(./imgs/shop.svg);
         position: relative;
         top: 5px;
@@ -91,7 +95,7 @@ img {
     object-fit: fill;
 }
 
-.temporaire {
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
