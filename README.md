@@ -4,7 +4,7 @@ Membres du groupe :
 
 - A : Noé Grosse
 - B mathew dacruz
-- C
+- C : Dany Delaistre
 - D
 
 [Consignes](CONSIGNES.md)
