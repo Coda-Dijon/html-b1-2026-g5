@@ -1,0 +1,383 @@
+
+/* =========================
+   CONFIGURATION GENERALE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vert-fonce: #263e32;
+    --vert: #607c61;
+    --vert-clair: #e8eee5;
+    --beige: #f5f2e9;
+    --blanc: #ffffff;
+    --texte: #454b45;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--beige);
+    color: var(--texte);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   MENU DE NAVIGATION
+========================= */
+
+.header {
+    background-color: var(--blanc);
+    padding: 20px 8%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--vert-fonce);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--vert);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--vert);
+}
+
+/* =========================
+   BANNIERE PRINCIPALE
+========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(31, 54, 40, 0.92),
+            rgba(31, 54, 40, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&auto=format&fit=crop&q=80")
+        center/cover no-repeat;
+
+    color: var(--blanc);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle,
+.section-label {
+    color: var(--vert);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .subtitle {
+    color: #c8ddbd;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #b5d1a9;
+}
+
+.hero-content p:not(.subtitle) {
+    font-size: 17px;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #dce9d3;
+    color: var(--vert-fonce);
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--blanc);
+}
+
+/* =========================
+   PRESENTATION DU PROJET
+========================= */
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 10%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-content h2,
+.section-title h2 {
+    color: var(--vert-fonce);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.project-content p:not(.section-label) {
+    margin-bottom: 18px;
+}
+
+/* =========================
+   NOS VALEURS
+========================= */
+
+.values {
+    background-color: var(--blanc);
+    padding: 90px 10%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background-color: var(--beige);
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+}
+
+.value-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: var(--vert-fonce);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   NOTRE EQUIPE
+========================= */
+
+.team {
+    padding: 90px 10%;
+}
+
+.team-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px;
+    background-color: var(--vert-clair);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team-card h3 {
+    font-size: 27px;
+    color: var(--vert-fonce);
+    margin-bottom: 15px;
+}
+
+.team-note {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion {
+    background-color: var(--vert-fonce);
+    color: var(--blanc);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.conclusion .section-label {
+    color: #b5d1a9;
+}
+
+.conclusion h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.conclusion p:not(.section-label) {
+    margin-bottom: 30px;
+}
+
+/* =========================
+   PIED DE PAGE
+========================= */
+
+.footer {
+    background-color: #1c3026;
+    color: var(--blanc);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer .logo {
+    color: var(--blanc);
+}
+
+.footer .logo span {
+    color: #b5d1a9;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #c4d0c5;
+}
+
+/* =========================
+   RESPONSIVE TABLETTE
+========================= */
+
+@media screen and (max-width: 800px) {
+
+    .project {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE TELEPHONE
+========================= */
+
+@media screen and (max-width: 550px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 55px 25px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .project {
+        padding: 60px 22px;
+        gap: 30px;
+    }
+
+    .project-image img {
+        height: 250px;
+    }
+
+    .values,
+    .team {
+        padding: 65px 22px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        padding: 30px 20px;
+    }
+
+    .conclusion h2 {
+        font-size: 30px;
+    }
+
+}
