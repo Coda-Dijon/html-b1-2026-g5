@@ -58,12 +58,14 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     h2 {
         margin: 1rem;
         margin-right: 4rem;
     }
     div {
-        margin: 2rem;
+        margin: 1rem;
     }
 
     ul {
@@ -169,14 +171,18 @@ figure {
     border: solid black 2px;
     width: clamp(20rem, 25%, 25%);
     margin: auto;
-    margin-top: 1.5rem;
+    margin: 1.5rem;
     img {
         width: 100%;
-        object-fit: fill;
+        object-fit: cover;
     }
     figcaption {
         background-color: teal;
         color: white;
         text-align: center;
     }
+}
+
+a[href^="https://github"] {
+    color: deeppink;
 }
