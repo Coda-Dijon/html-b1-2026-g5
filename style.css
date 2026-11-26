@@ -24,22 +24,18 @@ html body {
 
 .page .navbar {
   grid-area: head;
-  background-color: #8ca0ff;
 }
 
 .page main {
   grid-area: main;
-  background-color: #ffff64;
 }
 
 .page footer {
   grid-area: foot;
-  background-color: #8cffa0;
 }
 
 .navbar {
     color: #191919;
-    grid-area: head;
     background-color: rgba(200, 200, 200, .3);
     border: 1px solid rgba(255, 255, 255, .8);
     backdrop-filter: blur(10px);
