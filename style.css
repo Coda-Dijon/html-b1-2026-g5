@@ -10,30 +10,6 @@ html body {
     height: 100%;
 }
 
-.page {
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-areas:
-    "head head"
-    "main  main"
-    "foot  foot";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-}
-
-.page .navbar {
-  grid-area: head;
-}
-
-.page main {
-  grid-area: main;
-}
-
-.page footer {
-  grid-area: foot;
-}
-
 .navbar {
     color: #191919;
     background-color: rgba(200, 200, 200, .3);
@@ -88,7 +64,19 @@ footer {
     }
     div {
         margin: 2rem;
-    } 
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        color: white;
+    }
+
+    h3 {
+        margin: 0;
+    }
 }
 
 h3 {
