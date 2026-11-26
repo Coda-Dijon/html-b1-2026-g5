@@ -11,7 +11,7 @@ html body {
 }
 
 .navbar {
-    background-color: rgba(200, 200, 200, .3);
+    background-color: rgba(20, 20, 20, .3);
     border: 1px solid rgba(255, 255, 255, .8);
     backdrop-filter: blur(10px);
     display: flex;
@@ -28,11 +28,12 @@ html body {
     padding: 1rem;
 
     h1 {
+        color: #fff;
         margin-left: .5rem;
     }
 
     a {
-        color: #fff;
+        color: rgba(255, 255, 255, .8);
         text-decoration: none !important;
         margin: 1rem;
         justify-content: right;
@@ -40,7 +41,7 @@ html body {
 
     .shop {
         backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, .8);
+        border: 1px solid rgba(255, 255, 255, .5);
         border-radius: 100px;
         padding: .25rem .5rem;
     }
@@ -61,6 +62,9 @@ footer {
     flex-wrap: wrap;
     padding-bottom: 2rem;
     padding-top: 2rem;
+    p {
+        color: rgba(255, 255, 255, .8)
+    }
     h2 {
         margin: 1rem;
         margin-right: 4rem;
@@ -73,12 +77,22 @@ footer {
         list-style-type: none;
     }
 
+    li {
+        margin-bottom: .5rem;
+    }
+
     a {
-        color: white;
+        color: rgba(255, 255, 255, .8);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #fff;
     }
 
     h3 {
         margin: 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -113,9 +127,6 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h2 {
-        position: absolute;
-    }
     padding: 1rem;
     color: white;
     text-align: center;
