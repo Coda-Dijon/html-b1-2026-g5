@@ -10,47 +10,31 @@ html body {
     height: 100%;
 }
 
-.navbar {
+.navbar .computer {
+    display: none;
+}
+
+.navbar .mobile {
     background-color: rgba(20, 20, 20, .3);
-    border: 1px solid rgba(255, 255, 255, .8);
+    border: 1px solid rgba(255, 255, 255, .5);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: fixed;
     top: auto;
     left: 0;
     right: 0;
     bottom: 2rem;
-    width: clamp(25rem, 75%, 50rem);
+    width: clamp(15rem, 75%, 50rem);
     margin: auto;
     border-radius: 20px;
     padding: 1rem;
 
-    h1 {
-        display: none;
-        color: #fff;
-        margin-left: .5rem;
-    }
-
-    a {
-        color: rgba(255, 255, 255, .8);
-        text-decoration: none !important;
-        margin: 1rem;
-    }
-
-    .shop {
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, .5);
-        border-radius: 100px;
-        padding: .25rem .5rem;
-    }
-
-    .shop::after {
-        content: url(./imgs/shop.svg);
-        position: relative;
-        top: 5px;
-        margin-left: 5px;
+    img {
+        display: block;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -96,16 +80,6 @@ footer {
     }
 }
 
-h3 {
-    margin-top: 1rem;
-    margin-left: .5rem;
-}
-
-p {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
 
 img {
     width: 100%;
@@ -143,14 +117,38 @@ main {
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    flex: auto;
+}
+
+.body {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: none;
 
     h3 {
+        text-align: center;
         padding-top: 5rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
     }
 
     p {
-        width: clamp(25rem, 75%, 50rem);
+        width: clamp(20rem, 75%, 50rem);
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+
+.gallery h3 {
+    text-align: center;
+    padding-top: 5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .section_photo {
@@ -177,7 +175,9 @@ main {
     margin-bottom: 1.5rem;
 
     img {
+        width: 100%;
         height: 20rem;
+        object-fit: cover;
     }
 
     button {
@@ -211,14 +211,53 @@ a[href^="https://github"] {
     .navbar {
         position: sticky;
         top: 0;
+    }
+
+    .navbar .mobile {
+        display: none;
+    }
+
+    .navbar .computer {
+        background-color: rgba(20, 20, 20, .3);
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
         width: 100%;
         border-radius: 0;
-        border-top: none;
-        border-left: none;
-        border-right: none;
+        padding: 1rem;
 
         h1 {
-            display: block;
+            color: #fff;
+            margin-left: .5rem;
+        }
+
+        a {
+            color: rgba(255, 255, 255, .8);
+            text-decoration: none !important;
+            margin: 1rem;
+            justify-content: right;
+        }
+
+        img {
+            display: none;
+        }
+
+        .shop {
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 100px;
+            padding: .25rem .5rem;
+        }
+    
+        .shop::after {
+            content: url(./imgs/shop.svg);
+            position: relative;
+            top: 5px;
+            margin-left: 5px;
         }
     }
 }
