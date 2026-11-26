@@ -20,7 +20,7 @@ html body {
     align-items: center;
     position: sticky;
     top: 2rem;
-    width: 50rem;
+    width: clamp(25rem, 75%, 50rem);
     margin: auto;
     border-radius: 20px;
     padding: 1rem;
@@ -37,11 +37,10 @@ html body {
     }
 
     .shop {
-        background-color: rgba(200, 200, 200, .3);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, .8);
         border-radius: 100px;
-        padding: .25rem .5rem .25rem .5rem;
+        padding: .25rem .5rem;
     }
 
     .shop::after {
@@ -185,4 +184,15 @@ figure {
 
 a[href^="https://github"] {
     color: deeppink;
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        width: clamp(20rem, 75%, 30rem)
+    }
 }
