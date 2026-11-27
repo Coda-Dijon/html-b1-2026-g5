@@ -120,7 +120,7 @@ main {
     flex: auto;
 }
 
-.body {
+.content {
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -135,10 +135,33 @@ main {
         margin-bottom: 2rem;
     }
 
+    h2 {
+        text-align: center;
+        padding-top: 5rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
     p {
         width: clamp(20rem, 75%, 50rem);
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .photo_groupe {
+        display: block;
+        width: clamp(20rem, 75%, 50rem);
+        height: 37.5rem;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+
+    .centered {
+        text-align: center;
     }
 }
 
@@ -260,8 +283,4 @@ a[href^="https://github"] {
             margin-left: 5px;
         }
     }
-}
-
-.photo_groupe {
-    display: inline-block;
 }
